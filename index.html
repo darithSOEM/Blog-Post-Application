@@ -1,22 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/style.css">
-    <script src="script.js"></script>
-    <title>Blog Post Application</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post Application</title>
+  <link rel="stylesheet" href="/src/style.css">
 </head>
-
 <body>
-    <h1>Blog Post Application</h1>
-    <button id="add-button">Add Blog Post</button>
+  <div class="container">
+    <header>
+      <h1>Blog Posts</h1>
+      <button id="open-modal-btn" class="btn-primary">+ Add Post</button>
+    </header>
 
-    <!-- container of the card -->
-    <div class="container">
-        <ul class="">
+    <main>
+      <div id="posts-container" class="posts-grid"></div>
+    </main>
+  </div>
 
-        </ul>
+  <!-- Creation Modal -->
+  <div id="post-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2>Create New Post</h2>
+      <div class="input-group">
+        <label for="post-title-input">Title</label>
+        <input type="text" id="post-title-input" placeholder="Enter post title..." />
+      </div>
+      <div class="input-group">
+        <label for="post-content-input">Content</label>
+        <textarea id="post-content-input" placeholder="Enter post content..."></textarea>
+      </div>
+      <div class="modal-actions">
+        <button id="submit-post-btn" class="btn-success">Publish</button>
+        <button id="cancel-modal-btn" class="btn-secondary">Cancel</button>
+      </div>
     </div>
+  </div>
+
+  <script type="module" src="./src/script.js"></script>
 </body>
 </html>
