@@ -1,5 +1,5 @@
-export function updateContent(post, newContent) {
+export const updateContent =(post, newContent)=>{
   if (newContent.trim() !== '') {
-    post.content = newContent.trim();
+    post.content = newContent.trim(); 
   }
 }

@@ -1,4 +1,4 @@
-export function createPost(posts, title, content) {
+export const createPost =(posts, title, content)=>{
   if (!title.trim() || !content.trim()) return null;
 
   const newPost = {

@@ -89,14 +89,14 @@ window.onload = () => {
   renderPosts();
 };
 
-function closeModal() {
+const closeModal=() => {
   modal.classList.add('hidden');
   titleInput.value = '';
   contentInput.value = '';
 }
 
 // Render Cards Function
-function renderPosts() {
+const renderPosts =() => {
   postsContainer.innerHTML = '';
 
   posts.forEach(post => {
@@ -180,7 +180,7 @@ function renderPosts() {
   });
 }
 
-function escapeHTML(str) {
+const escapeHTML=(str)=> {
   return str.replace(/[&<>'"]/g, 
     tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
   );
